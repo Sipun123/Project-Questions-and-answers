@@ -1,0 +1,67 @@
+1)What are the components used as part of the design doc?
+Ans:-
+i)There are six components which are used as part of design doc.
+ii)These are APP,SERVICE,REPOSITORY,CONNECTIONUTILS,EMPLOYEEQUERIES,DATABASE & TABLES.
+ 
+2)Which class creates the connection and closes the connection?
+ANS:- ConnectionUtils class creates the connection and closes the connection.
+
+3)What does TestConnection class do?
+
+ANS:- TestConnection class tests whether the connection is established or not .
+
+4) what is the flow when we save an employee?
+That is what happens when we call service.save in App.java?
+You should Explain me each step of save method in Java code. Like after app.java where the call goes. Which class requests to open and close the connection. Which class commits or rollback the transaction . 
+ANS:- After app.java the call goes to service and save the employee data then goes to repository and then goes connectionutils class and this class requests to open and  close the connection .This class also commits or rollback the transaction.
+
+
+5)What are the parameters does service class passes to repository layer during save?
+
+ANS:- Employee emp, Connection con are the two parameters service classes passes to repository layer during save.
+
+6)What is the role of repository class?
+
+ANS-In  Repository class we write the Employee object connection queries with prepared statements. 
+
+7)How repository class creates the prepared statement?
+
+ANS:-Repository class creates prepared statement using connection.
+
+8)From which class repository class gets the queries?
+
+ANS:From EmployeeQueries class repository class gets the queries.
+
+9)What is the query we wrote to insert the employee object?
+
+ANS:-public static final String INSERT="INSERT INTO TBL_EMPLOYEE(ID,NAME,CITY,SALARY) VALUES(?,?,?,?)" ;
+
+10)How many positional parameters or question marks we used in the insert query.
+
+ANS:FOUR positional parameter or question marks we used in the insert query.
+
+11)What is the meaning of ? Or positional parameters in insert query?
+
+
+ANS:- Using positional parameters we have to add them in the same order that they are used in the query, and if we want to use the same value more than once we have to add it multiple times as separate parameters.
+
+12)Does positional parameters or ? Of insert queries are mapped to database columns ?
+
+ANS:-yes , positional parameters or ? Of insert queries are mapped to database columns .
+
+
+13)PS.executeupdate we do for insert update delete
+Is that above statement true?
+
+
+ANS:- yes ,the above statement is true.
+
+14)Similarly PS.executequery used for select queries.
+ANS:- YES.
+
+
+
+
+
+
+
